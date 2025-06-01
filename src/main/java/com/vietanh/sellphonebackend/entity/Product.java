@@ -30,8 +30,11 @@ public class Product {
 
     String imageUrl;
 
-    Integer ratingCount;
-    Float ratingPoint;
+    @Builder.Default
+    Integer ratingCount = 0;
+
+    @Builder.Default
+    Float ratingPoint = 0.0f;
 
     @Enumerated(EnumType.STRING)
     Color color;
